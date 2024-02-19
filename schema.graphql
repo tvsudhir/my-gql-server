@@ -1,0 +1,29 @@
+type ToDo {
+  todoId: String!
+  name: String!
+  text: String
+}
+
+input ToDoCreateInput {
+  name: String!
+  text: String
+}
+
+input ToDoUpdateInput {
+  name: String!
+  text: String
+}
+
+type Query {
+  listToDos: [ToDo!]!
+}
+
+type DeleteStatus {
+  status: String!
+}
+
+type Mutation {
+  createToDo(todo: ToDoCreateInput): ToDo!
+  updateToDo(todo: ToDoUpdateInput): ToDo!
+  deleteToDo(todoId: ID!): DeleteStatus!
+}
