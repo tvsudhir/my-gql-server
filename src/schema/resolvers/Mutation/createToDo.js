@@ -1,6 +1,4 @@
-import createTodo from "../../../todos/createTodo.js";
-
-export default async function createToDo(parent, args, context) {
-  const result = await createTodo(args.todo);
+export default async function createToDo(parent, args, { datasources }) {
+  const result = await datasources.todos.createTodo(args.todo);
   return result;
 };

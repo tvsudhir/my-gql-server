@@ -1,6 +1,4 @@
-import listTodos from "../../../todos/listTodos.js";
-
-export default async function listToDos() {
-  const result = await listTodos();
+export default async function listToDos(parent, args, { datasources }) {
+  const result = await datasources.todos.listTodos();
   return result;
 };

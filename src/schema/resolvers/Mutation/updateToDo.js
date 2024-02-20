@@ -1,6 +1,4 @@
-import opUpdateTodo from "../../../todos/updateTodo.js";
-
-export default async function updateToDo(parent, args, context) {
-  const result = await opUpdateTodo(args.todo);
+export default async function updateToDo(parent, args, { datasources }) {
+  const result = await datasources.todos.updateTodo(args.todo);
   return result;
 };

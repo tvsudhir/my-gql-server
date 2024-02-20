@@ -4,6 +4,7 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
 import * as resolvers from './schema/resolvers/index.js';
+import createContext from './schema/context/index.js';
 
 const schemaFile = readFileSync(resolve('schema.graphql'), 'utf-8');
 const apolloServer = new ApolloServer({
@@ -12,7 +13,10 @@ const apolloServer = new ApolloServer({
 });
 
 async function startApp() {
-  const { url } = await startStandaloneServer(apolloServer);
+  const { url } = await startStandaloneServer(apolloServer, {
+    context: createContext,
+  });
+
   console.log(`Sever Started: ${url}`);
 }
 

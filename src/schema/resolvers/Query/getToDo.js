@@ -1,6 +1,4 @@
-import opGetToDo from "../../../todos/getToDo.js";
-
-export default async function getToDo(parent, args, context) {
-  const result = await opGetToDo(args.todoId);
+export default async function getToDo(parent, args, { datasources }) {
+  const result = await datasources.todos.getToDo(args.todoId);
   return result;
 }
