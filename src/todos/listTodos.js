@@ -6,7 +6,8 @@ export default async function listTodos() {
       todoid as todoId,
       name,
       text
-    from todos;
+    from todos
+    order by name;
   `;
 
   return result.map((t) => ({

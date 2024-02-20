@@ -1,5 +1,5 @@
 type ToDo {
-  todoId: String!
+  todoId: ID!
   name: String!
   text: String
 }
@@ -10,12 +10,14 @@ input ToDoCreateInput {
 }
 
 input ToDoUpdateInput {
+  todoId: ID!
   name: String!
   text: String
 }
 
 type Query {
   listToDos: [ToDo!]!
+  getToDo(todoId: ID!): ToDo
 }
 
 type DeleteStatus {
