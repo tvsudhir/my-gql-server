@@ -1,14 +1,19 @@
-Start Developing
+## Installation
+```
+npm i
+```
+
+## Start Developing
 ```
 npm run dev
 ```
 
-Deployment
+## Deployment
 ```
 npm run start
 ```
 
-See GraphQL Playground
+## See GraphQL Playground
 ```
 http://localhost:4000/graphql
 ```
