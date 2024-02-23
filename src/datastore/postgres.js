@@ -5,8 +5,8 @@ export function connect() {
     host: 'localhost',
     port: 5432,
     database: 'my-app',
-    username: 'test',
-    password: 'test',
+    // username: 'test',
+    // password: 'test',
   });
 }
 
