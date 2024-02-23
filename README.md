@@ -25,3 +25,10 @@ npm run start
 ```
 http://localhost:4000/graphql
 ```
+
+## Run a script present in sr/script folder
+```
+npm run script -- <script-name> <var-1> <var-2> ...
+```
+Example:
+- npm run script --- scrape
