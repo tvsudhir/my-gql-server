@@ -6,7 +6,7 @@ export default async function runScript() {
     const result = await script.default(...args);
     return result;
   } catch (err) {
-    console.error('err', err)
+    console.error('err', err);
     return null;
   }
 }

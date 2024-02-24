@@ -14,17 +14,16 @@ const PORT = 8080;
 //   ]);
 // });
 
-
-export default async function appStart() {
+export default async function appStart () {
   const apolloServer = new ApolloServer({
     typeDefs: {},
-    resolvers: {},
+    resolvers: {}
   });
 
   await apolloServer.start();
 
   app.use('/graphql', cors(), express.json(), expressMiddleware(apolloServer));
-  
+
   app.listen(PORT);
 }
 

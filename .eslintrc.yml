@@ -1,0 +1,14 @@
+---
+extends:
+  - 'semistandard'
+
+ignorePatterns:
+  - '***/*.old.*'
+
+rules:
+  comma-dangle:
+    - 2
+    - 'always-multiline'
+  space-before-function-paren: 
+    - error
+    - never
