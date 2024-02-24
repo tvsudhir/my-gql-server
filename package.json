@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node --watch src/app",
     "lint": "npx eslint src",
-    "lint-fix": "npx eslint src --fix",
+    "lint-fix": "npx eslint --fix src",
     "start": "node src/app",
     "script": "node src/script",
     "test": "jest --collectCoverage=false",
